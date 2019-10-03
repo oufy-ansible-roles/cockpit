@@ -1,0 +1,18 @@
+galaxy_info:
+  role_name: cockpit
+  author: oufy
+  description: Cockpit role
+  company: OufY.net
+
+  license: GPLv3
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: EL
+    versions:
+    - 7
+
+  galaxy_tags:
+  - cockpit
+  - management
