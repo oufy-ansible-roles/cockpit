@@ -1,7 +1,11 @@
 cockpit_packages:
-- cockpit-dashboard
-- cockpit-pcp
-- cockpit-shell
-- cockpit-storaged
-- cockpit-system
-- cockpit-packagekit
+  - cockpit-bridge
+  - cockpit-dashboard
+  - cockpit-system
+  - cockpit-ws
+  - cockpit-storaged
+  - cockpit-subscriptions
+  - cockpit-composer
+cockpit_port: "19090"
+cockpit_custom_key: ""
+cockpit_custom_cert: ""
