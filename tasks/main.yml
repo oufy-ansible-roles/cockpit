@@ -37,6 +37,22 @@
     notify:
     - Restart cockpit
 
+  - name: Customize Cockpit certificate
+    template:
+      src: 1-pki.cert.j2
+      dest: "/etc/cockpit/ws-certs.d/1-{{ ansible_host }}.cert"
+      owner: root
+      group: cockpit-ws
+      mode: 0640
+      seuser: system_u
+      serole: object_r
+      setype: etc_t
+    when: cockpit_custom_key and cockpit_custom_cert
+    notify:
+      - Restart cockpit
+
+
+
   when: cockpit_port|default(9090) != 9090
 
 - name: Enable standard Cockpit service through firewalld
